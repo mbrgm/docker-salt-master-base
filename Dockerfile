@@ -16,3 +16,5 @@ RUN apt-get update \
     && useradd -M -s /usr/sbin/nologin salt
 
 ADD assets/salt/master /etc/salt/master
+
+VOLUME ["/data"]
