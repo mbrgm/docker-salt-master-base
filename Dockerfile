@@ -18,3 +18,4 @@ RUN apt-get update \
 ADD assets/salt/master /etc/salt/master
 
 VOLUME ["/data"]
+VOLUME ["/var/run/salt"]
