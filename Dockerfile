@@ -15,7 +15,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -M -s /usr/sbin/nologin salt
 
+RUN rm /etc/salt/master
+
 ADD assets/salt/master /etc/salt/master
+ADD assets/salt/master-base.conf /etc/salt/master.d/
 
 VOLUME ["/data"]
 VOLUME ["/var/run/salt"]
